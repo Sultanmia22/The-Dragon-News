@@ -1,9 +1,10 @@
 
 import React from 'react';
 import { FaBookmark, FaEye, FaShareAlt, FaStar } from 'react-icons/fa';
+import { Link } from 'react-router';
 
 const NewsCard = ({news}) => {
-    console.log(news);
+    // console.log(news);
     return (
         <div className=''>
     <div className=" bg-white rounded-lg shadow-lg overflow-hidden">
@@ -52,9 +53,9 @@ const NewsCard = ({news}) => {
         <p className="text-gray-600 text-sm leading-relaxed mb-3">
           {news.details.substring(0, 200)}...
         </p>
-        <button className="text-orange-500 font-semibold text-sm hover:text-orange-600 transition">
+        <Link to={`/news-details/${news.id}`} className="text-orange-500 font-semibold text-sm hover:text-orange-600 transition">
           Read More
-        </button>
+        </Link>
       </div>
 
       <div className='w-full h-[1px] bg-gray-300'></div>

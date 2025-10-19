@@ -10,7 +10,7 @@ const CategoryNews = () => {
     console.log(id);
 
     const data = useLoaderData();
-    console.log(data);
+    // console.log(data);
 
     useEffect(() => {
         
